@@ -1,4 +1,5 @@
 ## ubuntu 投屏设置  
+
 在System Settings --> Display中设置即可
 
 ## ubuntu 截图
@@ -26,6 +27,9 @@ sudo locate *find_word*
 ```bash
 hexdump file_name
 hd file_name
+
+# -v表示显示所有数据，如果不包含这一选项，对于同上一行完全相同的数据，hexdump会以*代替显示
+hexdump -v file_name
 ```
 
 ## Ubuntu下解压.rar文件，提示Parsing filters is unsupported错误解决方案
@@ -167,12 +171,29 @@ wget https://release.axocdn.com/linux/GitKraken-v6.5.1.deb
 
 step2:安装
 
-终端输入命令: sudo dpkg -i gitkraken-amd64.deb
+终端输入命令: 
+
+```
+sudo dpkg -i gitkraken-amd64.deb
+```
 
 如果安装不成功，输入命令:
 
+```
 sudo apt-get -f install
+```
 
 然后重新输入命令:
 
+```
 sudo dpkg -i gitkraken-amd64.deb
+```
+
+## locate命令找不到已存在文件的解决办法
+
+经常新下载或者新build出来的东西，文件明明存在，却无法被程序调用或locate不到，这时候需要更新搜索数据库。
+
+```
+sudo updatedb
+```
+

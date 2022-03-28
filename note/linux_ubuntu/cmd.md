@@ -44,3 +44,14 @@ df -h
 diff -r -y --left-column dir1 dir2
 ```
 
+#### 压缩解压缩工具：tar
+
+使用tar
+
+```shell
+#压缩
+tar -czvf demo.tar.gz demo
+#解压缩
+tar -xzvf demo.tar.gz
+```
+
