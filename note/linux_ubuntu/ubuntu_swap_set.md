@@ -15,7 +15,7 @@ mkdir ~/swapfile
 cd ~/swapfile
 sudo dd if=/dev/zero of=swap bs=1M count=8k
 ```
-其中of=是指创建的文件名称，创建8G(bs*count)的swap
+其中of=是指创建的文件名称，创建8G(bs*count)的swap（注意此命令需要时间较长，可能需要等待几十秒）
 ### 2. 转换swap文件
 将生成的文件转换成swap类型的文件
 ```bash
@@ -32,11 +32,11 @@ sudo swapoff swap
 ```
 ## 三、永久生效
 虽然交换空间到此已经扩展成功了，但是电脑重启的话，还是会恢复默认的swap大小。
-如果要一直使用这个swap，要把它写入/etc/fstab文件中.（注意如果fstab中已经有swap，需要将其注释掉）
+如果要一直使用这个swap，要把它写入/etc/fstab文件中.（==注意如果fstab中已经有swap，需要将其注释掉==）
 
 ```bash
 sudo cp /etc/fstab /etc/fstab.bak
-echo '/home/peter/swapfile/swap none swap sw 0 0' | sudo tee -a /etc/fstab
+echo '/home/user_name/swapfile/swap none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
 

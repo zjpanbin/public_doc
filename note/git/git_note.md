@@ -80,3 +80,34 @@ git push -u origin dev
 ## 四、git lfs push注意事项
 
 注意git lfs push时，一定要先lfs push，再分支push，不然会出验证过期问题
+
+## 五、本地仓库相关
+
+### 1、本地仓库分支列表
+
+```shell
+git branch
+```
+
+### 2、删除本地仓库
+
+```shell
+# 如果有未提交代码会提醒，同时不能删除分支
+git branch -d branch_name
+# 无论是否有未提交代码，强制删除分支
+git branch -D branch_name
+```
+
+## 六、子仓库相关
+
+### 1、子仓库同步
+
+主仓库切换分支后，需要把子仓库同步到相应提交版本，可以使用下面的命令
+
+```shell
+git submodule sync
+git submodule update 
+```
+
+
+

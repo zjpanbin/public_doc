@@ -55,3 +55,19 @@ tar -czvf demo.tar.gz demo
 tar -xzvf demo.tar.gz
 ```
 
+#### ls 只显示目录或文件
+
+directory :
+
+```shell
+ls -d */
+ls -l | grep ^d
+```
+
+
+file :
+
+```shell
+ls -l | grep -v ^d
+```
+

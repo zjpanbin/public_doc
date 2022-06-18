@@ -158,10 +158,10 @@ tcpdump 'gateway snup and (port ftp or ftp-data)'
 
 ### 11. 抓取ping包
 
-```swift
+```bash
 tcpdump -c 5 -nn -i ens33 
 
-==指定主机抓ping包==
+# 指定主机抓ping包
 tcpdump -c 5 -nn -i eth0 icmp and src 192.168.100.62
 ```
 
