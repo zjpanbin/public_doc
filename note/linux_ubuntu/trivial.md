@@ -133,6 +133,8 @@ sudo dpkg -i teamviewer_15.15.5_amd64.deb
 
 ## 安装typora (markdown工具)
 
+#### 最新版本
+
 ```bash
 # or run:
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
@@ -142,6 +144,21 @@ sudo add-apt-repository 'deb https://typora.io/linux ./'
 sudo apt-get update
 # install typora
 sudo apt-get install typora
+```
+
+#### 免费版本
+
+```shell
+# 增加typora deb repository
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+
+apt-cache showpkg typora # 列出所有可用版本
+sudo apt-get install typora=0.11.18-1 # 安装指定版本的
+sudo apt-mark hold typora # 保持当前版本的软件包，阻止自动升级
+
+#也可以下载特定版本的typora deb到本地，以后都可以直接dpkg安装
+sudo apt download typora=0.11.18-1
 ```
 
 ## 文件及目录对比（使用meld）
@@ -160,7 +177,7 @@ meld&
 
 ## Ubuntu GIT工具GitKraken安装
 
-step1:下载
+#### step1:下载
 
 下载地址: https://www.gitkraken.com/download/linux-deb
 注意：上述为最新版本，会收费，免费版本请如下获取：
@@ -169,12 +186,12 @@ step1:下载
 wget https://release.axocdn.com/linux/GitKraken-v6.5.1.deb
 ```
 
-step2:安装
+#### step2:安装
 
 终端输入命令: 
 
 ```
-sudo dpkg -i gitkraken-amd64.deb
+sudo dpkg -i gGitKraken-v6.5.1.deb
 ```
 
 如果安装不成功，输入命令:
@@ -186,7 +203,7 @@ sudo apt-get -f install
 然后重新输入命令:
 
 ```
-sudo dpkg -i gitkraken-amd64.deb
+sudo dpkg -i GitKraken-v6.5.1.deb
 ```
 
 ## locate命令找不到已存在文件的解决办法

@@ -9,11 +9,23 @@ apt-get upgrade
 apt-get install software_name
 #卸载软件及其配置
 apt-get --purge remove  software_name
-卸载软件及其依赖的安装包
+#卸载软件及其依赖的安装包
 apt-get autoremove software_name
 
 #罗列已安装软件
 dpkg --list
+
+#罗列software_name的可安装版本等相关信息
+apt-cache showpkg software_name
+# 安装指定版本的software_name
+sudo apt-get install software_name=0.11.18-1
+# 保持当前版本的软件包，阻止自动升级
+sudo apt-mark hold software_name
+
+# 下载software_name deb到本地，以便以后都可以直接dpkg安装
+sudo apt download software_name
+# 下载特定版本的software_name deb到本地
+sudo apt download software_name=0.11.18-1
 ```
 
 

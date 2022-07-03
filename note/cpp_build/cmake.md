@@ -15,7 +15,7 @@ Eigen是一个C++开源线性代数库，提供矩阵的线性代数运算，Eig
 
 cmake使用eigen，需要在CMakeLists.txt中添加如下语句：
 
-```
+```shell
 find_package(Eigen3)
 
 include_directories(${EIGEN3_INCLUDE_DIRS})
@@ -42,7 +42,7 @@ add_executable(getting_started src/getting_started.cpp)
 
 cmake使用pcl，需要在CMakeLists.txt中添加如下语句：
 
-```
+```shell
 find_package(PCL 1.2 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
@@ -54,7 +54,7 @@ target_link_libraries (pcl_test ${PCL_LIBRARIES})
 
 举个CMakeLists.txt的例子如下：
 
-```
+```shell
 cmake_minimum_required(VERSION 2.6)
 project(pcl_test)
 
