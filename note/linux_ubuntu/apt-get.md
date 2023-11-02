@@ -15,6 +15,9 @@ apt-get autoremove software_name
 #罗列已安装软件
 dpkg --list
 
+#搜索包含关键字的可安装的package
+apt-cache search 安装包关键字
+
 #罗列software_name的可安装版本等相关信息
 apt-cache showpkg software_name
 # 安装指定版本的software_name

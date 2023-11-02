@@ -22,6 +22,14 @@ free -m
 df -h
 ```
 
+#### 查看当前目录及子目录占用空间大小：du
+
+使用du
+
+```bash
+du -m --max-depth=1
+```
+
 #### 文件及目录对比工具：diff
 
 常用参数：
@@ -69,5 +77,16 @@ file :
 
 ```shell
 ls -l | grep -v ^d
+```
+
+#### 用户及用户组相关
+
+修改目录所属的用户组及用户
+
+```bash
+# 把home目录下的dir1目录的所属组改为gridgroup组
+chgrp -R gridgroup /home/dir1 #参数-R是递归设置各级子目录
+# 把home目录下的dir1目录的拥有者改为griduser用户
+chown -R griduser /home/dir1  #参数-R是递归设置各级子目录
 ```
 

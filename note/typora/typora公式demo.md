@@ -44,3 +44,42 @@ $$
 
 
 
+$$
+\frac{\partial F} {\partial x}   
+
+\frac{d\bold F} {d\bold x}
+$$
+
+$$
+\frac {dF(X)}{dX^T} = 
+\left[ 
+\frac{\partial F} {\partial x_1}  \frac{\partial F} {\partial x_2}  ... \frac{\partial F} {\partial x_n}  
+\right] = 
+\left[ 
+\frac {dF(X)}{dX}
+\right]^T
+\tag {1.2}
+$$
+
+
+
+
+$$
+F=\{F_1(x),F_2(x),...,F_n(x)\}^T
+\tag 1
+$$
+
+
+
+
+$$
+F(X) = 
+\left [ 
+    \begin{matrix}   
+        x_{11} & x_{12} & \cdots & x_{1d}\\      
+        x_{21} & x_{22} & \cdots & x_{2d}\\     
+        \vdots & \vdots & \ddots & \vdots \\     
+        x_{11} & x_{12} & \cdots & x_{1d}\\
+    \end{matrix}
+\right]
+$$

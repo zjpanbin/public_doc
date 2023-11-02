@@ -3,6 +3,7 @@
 在System Settings --> Display中设置即可
 
 ## ubuntu 截图
+
 使用ubuntu自带截图工具screenshot
 快捷键设置：
 System setting -> hardware -> keyboard

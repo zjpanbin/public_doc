@@ -60,7 +60,10 @@ git branch -a -vv
 ```
 
 ## 三、git merge简单用法
+### 1、合并分支
+
 开发分支（dev）上的代码达到上线的标准后，要合并到 master 分支：
+
 ```
 git checkout dev
 git pull
@@ -75,6 +78,15 @@ git pull
 git checkout dev
 git merge master 
 git push -u origin dev
+```
+
+### 2、合并tag
+
+```shell
+# 获取远端全部tag
+git fetch --tags origin
+# 合并tag_name到本分支
+git merge tag_name
 ```
 
 ## 四、git lfs push注意事项
@@ -109,5 +121,5 @@ git submodule sync
 git submodule update 
 ```
 
-
+七、git tag 
 

@@ -60,6 +60,21 @@ sudo vi /home/xxx/rosdistro/rosdep/sources.list.d/20-default.list
 
 ![](./res/20-default-after.png)
 
+```bash
+# os-specific listings first
+yaml file:///home/panb/rosdistro/rosdep/osx-homebrew.yaml osx
+
+# generic
+yaml file:///home/panb/rosdistro/rosdep/base.yaml
+yaml file:///home/panb/rosdistro/rosdep/python.yaml
+yaml file:///home/panb/rosdistro/rosdep/ruby.yaml
+gbpdistro file:///home/panb/rosdistro/releases/fuerte.yaml fuerte
+
+# newer distributions (Groovy, Hydro, ...) must not be listed anymore, they are being fetched from the rosdistro index.yaml instead
+```
+
+
+
 ### 3、修改python package中的相关路径
 
 将指向外网raw.githubusercontent.com的文件路径重定向到本地。
@@ -83,7 +98,7 @@ sudo vi /usr/lib/python3/dist-packages/rosdep2/sources_list.py
 对于python2：
 
 ```
-sudo vi /usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py
+sudo vi /usr/lib/python2.7/dist-packages/rosdep2/sources_list.py
 ```
 
 修改DEFAULT_SOURCES_LIST_URL
@@ -112,6 +127,27 @@ sudo vi /usr/lib/python2.7/dist-packages/rosdep2/rep3.py
 ```
 #REP3_TARGETS_URL = 'https://raw.githubusercontent.com/ros/rosdistro/master/releases/targets.yaml'
 REP3_TARGETS_URL = 'file:///home/xxx/rosdistro/releases/targets.yaml'
+```
+
+#### c、修改gbpdistro_support.py文件
+
+对于python3：
+
+```
+sudo vi /usr/lib/python3/dist-packages/rosdep2/gbpdistro_support.py
+```
+
+对于python2：
+
+```
+sudo vi /usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py
+```
+
+修改FUERTE_GBPDISTRO_URL
+
+```
+#FUERTE_GBPDISTRO_URL = 'https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml'
+FUERTE_GBPDISTRO_URL = 'file:///home/panb/rosdistro/releases/fuerte.yaml'
 ```
 
 #### d、修改\_\_init\_\_.py文件
