@@ -59,7 +59,14 @@ git remote -v
 git branch -a -vv
 ```
 
+### 7、修改远程分支地址
+
+```bash
+git remote set-url origin  git@github.com:zjpanbin/public_doc.git
+```
+
 ## 三、git merge简单用法
+
 ### 1、合并分支
 
 开发分支（dev）上的代码达到上线的标准后，要合并到 master 分支：
