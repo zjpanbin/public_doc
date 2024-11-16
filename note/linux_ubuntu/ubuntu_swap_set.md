@@ -39,4 +39,3 @@ sudo cp /etc/fstab /etc/fstab.bak
 echo '/home/user_name/swapfile/swap none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-

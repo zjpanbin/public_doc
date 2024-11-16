@@ -96,7 +96,21 @@ git fetch --tags origin
 git merge tag_name
 ```
 
-## 四、git lfs push注意事项
+## 四、git lfs相关
+
+### 1、git lfs 安装
+
+```bash
+# 三句话安装git lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install
+
+# 测试是否安装成功
+git lfs --version
+```
+
+### 2、git lfs push注意事项
 
 注意git lfs push时，一定要先lfs push，再分支push，不然会出验证过期问题
 
@@ -128,5 +142,32 @@ git submodule sync
 git submodule update 
 ```
 
-七、git tag 
+## 七、杂项
+
+### 1、如下报错解决办法
+
+当使用命令 git pull 出现错误信息如下:
+
+```bash
+server certificate verification failed. CAfile: none CRLfile: none
+```
+
+解决方案：
+
+```bash
+git config --global http.sslverify false
+git config --global https.sslverify false
+```
+
+git clone报错：
+
+```bash
+server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+```
+
+解决方案：
+
+```bash
+export GIT_SSL_NO_VERIFY=1
+```
 

@@ -1,4 +1,28 @@
-#### typora公式demo
+# Typora Latex
+
+## 一、让 Typora 支持 bm加粗
+
+方法是增加bm的macro
+
+1. 编辑/usr/share/typora/resources/window.html文件
+
+2. 搜索window.MathJax，找到其下面的Tex项
+
+3. 在Tex项目下面的Macros项目下面增加`bm: ["\\boldsymbol{#1}",1],`这个macro，重启typora即可
+
+   ```html
+   Tex:{
+       Macros: {
+           ...
+           bm: ["\\boldsymbol{#1}",1],
+           ...
+       }
+   }
+   ```
+
+   
+
+## 二、typora公式demo
 
 1、行内公式demo：$\sigma*\pi*\theta*x^2$
 
@@ -82,4 +106,14 @@ F(X) =
         x_{11} & x_{12} & \cdots & x_{1d}\\
     \end{matrix}
 \right]
+$$
+
+
+$$
+\begin{align} \bm{r}_{\Delta \bm{R}_{ij}} &= \mathrm{Log} \left(\Delta \tilde{\bm{R}}_{ij}^\mathrm{T} \left(\bm{R}_i^\mathrm{T} \bm{R}_j \right)\right) \\ \bm{r}_{\Delta \bm{v}_{ij}} &= \bm{R}_i^T \left(\bm{v}_j - \bm{v}_i - \bm{g} \Delta t_{ij} \right) - \Delta \tilde{\bm{v}}_{ij} \\ \bm{r}_{\Delta \bm{p}_{ij}} &= \bm{R}_i^\mathrm{T} \left(\bm{p}_j - \bm{p}_i - \bm{v}_i \Delta t_{ij} - \frac{1}{2}\bm{g} \Delta t_{ij}^2 \right) - \Delta \tilde{\bm{p}}_{ij} \end{align}
+$$
+
+$$
+a \boxminus b \\
+c \boxplus d
 $$
