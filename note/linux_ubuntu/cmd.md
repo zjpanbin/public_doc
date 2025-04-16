@@ -90,3 +90,21 @@ chgrp -R gridgroup /home/dir1 #参数-R是递归设置各级子目录
 chown -R griduser /home/dir1  #参数-R是递归设置各级子目录
 ```
 
+#### 设置系统时间
+
+临时性设置系统时间（重启恢复）：
+
+```shell
+sudo date -s "YYYY-MM-DD HH:MM:SS"
+#demo
+sudo date -s "2017-01-23 10:30:00"
+```
+
+设置系统硬件时间（重启保留修改）：
+
+```shell
+sudo hwclock --set --date="YYYY-MM-DD HH:MM:SS"
+#demo
+sudo hwclock --set --date="2017-01-23 10:30:00"
+```
+

@@ -1,34 +1,7 @@
-# Typora Latex
+# Latex公式
 
-## 一、让 Typora 支持 bm加粗
+## 一、一些latex公式的demo：
 
-方法是增加bm的macro
-
-1. 编辑/usr/share/typora/resources/window.html文件
-
-2. 搜索window.MathJax，找到其下面的Tex项
-
-3. 在Tex项目下面的Macros项目下面增加`bm: ["\\boldsymbol{#1}",1],`这个macro，重启typora即可
-
-   ```html
-   Tex:{
-       Macros: {
-           ...
-           bm: ["\\boldsymbol{#1}",1],
-           ...
-       }
-   }
-   ```
-
-   
-
-## 二、typora公式demo
-
-1、行内公式demo：$\sigma*\pi*\theta*x^2$
-
-
-
-2、行间公式demo：
 $$
 p(x_t|u_t,x_{t-1}) = det(2\pi R_t)^{-\frac{1}{2}}exp\{-\frac{1}{2}(x_t-A_tx_{t-1}-B_tu_t)^TR_t^{-1}(x_t-A_tx_{t-1}-B_tu_t)\}     \ \ \ \ \ \ \ \ \ (1)  \\
 
@@ -125,4 +98,11 @@ $$
 \oplus\\
 \bigotimes
 \otimes\\
+$$
+
+## 二、论文算法demo
+
+
+$$
+
 $$
